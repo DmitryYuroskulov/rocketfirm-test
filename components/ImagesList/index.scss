@@ -1,0 +1,45 @@
+.ImagesList {
+    width: 100%;
+
+    &__view {
+        &__icon {
+            cursor: pointer;
+
+            & rect {
+                fill: rgb(189, 189, 189);
+            }
+
+            &:hover,
+            &.active {
+                & rect {
+                    fill: var(--bg-second-color);
+                }
+            }
+
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    & .gutter-sizer {
+        width: 4%;
+    }
+    & .grid-sizer,
+    & .ImageBlock {
+        width: 29.3333%;
+        margin-bottom: 18px;
+    }
+
+    &__images {
+        margin-top: 70px;
+        width: 100%;
+
+        &.list {
+            & .grid-sizer,
+            & .ImageBlock {
+                width: 100%;
+            }
+        }
+    }
+}

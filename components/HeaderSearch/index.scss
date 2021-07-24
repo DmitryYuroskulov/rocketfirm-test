@@ -1,0 +1,37 @@
+.HeaderSearch {
+    text-align: center;
+
+    & input {
+        max-width: 100%;
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: 72px;
+        background: none;
+        border: none;
+        color: var(--font-white-color);
+
+        &::placeholder {
+            color: var(--font-white-color);
+            text-align: center;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    // &__line {
+    //     display: block;
+    //     margin-top: 14px;
+    //     min-height: 1px;
+    //     width: 100%;
+
+    //     background-color: var(--bg-color);
+    // }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderSearch input {
+        font-size: 36px;
+    }
+}

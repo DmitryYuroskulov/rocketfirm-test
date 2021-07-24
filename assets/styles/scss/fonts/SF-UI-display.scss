@@ -1,0 +1,35 @@
+@import '../mixins/font-face-mixin.scss';
+
+$FONT_NAME: 'SF-UI-Display';
+
+// @font-face {
+//     @include registerFont($FONT_NAME, 'Ultralight', 400, 'normal');
+// }
+
+// @font-face {
+//     @include registerFont($FONT_NAME, 'Thin', 400, 'normal');
+// }
+
+@font-face {
+    @include registerFont($FONT_NAME, 'Light', 400, 'normal');
+}
+
+@font-face {
+    @include registerFont($FONT_NAME, 'Medium', 500, 'normal');
+}
+
+@font-face {
+    @include registerFont($FONT_NAME, 'Semibold', 600, 'normal');
+}
+
+// @font-face {
+//     @include registerFont($FONT_NAME, 'Bold', 'bold', 'normal');
+// }
+
+// @font-face {
+//     @include registerFont($FONT_NAME, 'Heavy', 'normal', 'normal');
+// }
+
+// @font-face {
+//     @include registerFont($FONT_NAME, 'Black', 'normal', 'normal');
+// }

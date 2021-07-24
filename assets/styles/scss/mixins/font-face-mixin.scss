@@ -1,0 +1,9 @@
+@mixin registerFont($FONT_NAME, $FONT_TYPE, $FONT_WEIGHT, $FONT_STYLE) {
+    $FONT_PATH: '~@/assets/fonts/' + $FONT_NAME + '/';
+
+    font-family: $FONT_NAME;
+    src: local($FONT_NAME + ' ' + $FONT_TYPE),
+        url($FONT_PATH + $FONT_NAME + '-' + $FONT_TYPE + '.woff') format('woff');
+    font-weight: $FONT_WEIGHT;
+    font-style: $FONT_STYLE;
+}

@@ -1,0 +1,44 @@
+.HeaderSearchHistory {
+    text-align: center;
+    background: var(--bg-second-color);
+
+    &__title {
+        font-size: 36px;
+    }
+
+    padding-bottom: 20px;
+
+    &.small {
+        & .HeaderSearchHistory__words {
+            max-width: 100%;
+            overflow: hidden;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+
+            & span {
+                display: block;
+                white-space: nowrap;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &__words {
+        margin-top: 30px;
+
+        & span {
+            cursor: pointer;
+            margin-bottom: 20px;
+
+            &:not(:first-child) {
+                margin-left: 40px;
+            }
+        }
+    }
+}

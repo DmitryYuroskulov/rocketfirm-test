@@ -1,0 +1,95 @@
+.ImageBlock {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+
+        transition: 0.4s;
+
+        &.shadow {
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__img {
+        width: 100%;
+
+        transition: 0.5s;
+        object-fit: cover;
+    }
+
+    &:hover {
+        & .ImageBlock__content {
+            opacity: 1;
+        }
+
+        & .ImageBlock__img {
+            filter: blur(8px);
+        }
+    }
+
+    & .author {
+        &__name,
+        &__username {
+            font-size: 18px;
+            color: var(--font-white-color);
+        }
+
+        &__avatar {
+            width: 70px;
+            height: 70px;
+            border: 1px solid var(--bg-color);
+            border-radius: 8px;
+        }
+
+        &__name {
+            margin-top: 13px;
+        }
+    }
+
+    &__actions {
+        margin-top: 50px;
+        user-select: none;
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            &:not(:first-child) {
+                margin-left: 40px;
+            }
+
+            &.in-favorites {
+                & path {
+                    fill: #f94d29;
+                }
+            }
+
+            &,
+            & svg {
+                transition: 0.5s;
+            }
+
+            &:hover,
+            &:hover svg {
+                & .ImageBlock__actions__icon {
+                    & path {
+                        fill: black;
+                    }
+                }
+
+                transform: scale(1.7);
+            }
+        }
+    }
+}
